@@ -1,7 +1,12 @@
 name: C/C++ CI
 
-on: 
+on:
   workflow_dispatch:
+  push:
+    branches: [ paf ]
+  pull_request:
+    branches: [ paf ]
+
 
 
 jobs:
