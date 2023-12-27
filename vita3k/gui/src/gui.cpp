@@ -622,8 +622,12 @@ void get_sys_apps_title(GuiState &gui, EmuEnvState &emuenv) {
                 emuenv.app_info.app_title = "Trophy Collection";
             } else if (app == "NPXS10015")
                 emuenv.app_info.app_short_title = emuenv.app_info.app_title = "Settings";
-            else
+            else if (app == "NPXS10026")
                 emuenv.app_info.app_short_title = emuenv.app_info.app_title = "Content Manager";
+            else {
+                emuenv.app_info.app_short_title = "PS Vita OS";
+                emuenv.app_info.app_title = "PlayStation Vita OS";
+            }
         }
         gui.app_selector.sys_apps.push_back({ emuenv.app_info.app_version, emuenv.app_info.app_category, {}, {}, {}, {}, emuenv.app_info.app_short_title, emuenv.app_info.app_title, emuenv.app_info.app_title_id, app });
     }
